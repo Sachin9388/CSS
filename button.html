@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+    <style>
+        button{
+            position: relative;
+            border: none;
+            transition: .4s ease-in;
+            z-index: 1;
+            font-size: 40px;
+            padding: 50px 60px;
+            margin: 10px 10px;
+        }
+        button::before,
+        button::after{
+            position: absolute;
+            content: "";
+            z-index: -1;
+        }
+        .btn-1:hover{
+            box-shadow: inset -10.5em 0 0 0 #056f87,inset 10.5em 0 0 0 #056f87;
+        }
+        .btn-2::after{
+            height: 0;
+            left: 0;
+            top: 0;
+            transition-duration: 0.6s;
+            width: 100%;  
+            box-shadow: inset -10.5em 0 0 0 #056f87,inset 10.5em 0 0 0 #056f87;  
+        }
+        .btn-2:hover::after{
+            height: 100%;
+        }
+        .btn-3:hover{
+            background: rgba(8, 167, 235, 0.801);
+            box-shadow: 0 0 50px #056f87,0 0 25px #056f87,0 0 50px #056f87,0 0 20px #056f87;
+        }
+        .btn-4::after{
+            height: 0;
+            left: 0;
+            bottom: 0;
+            transition-duration: 0.6s;
+            width: 100%;  
+            box-shadow: inset -10.5em 0 0 0 #056f87,inset 10.5em 0 0 0 #056f87; 
+        }
+        .btn-4:hover::after{
+            height: 100%;
+        }
+        .btn-5:hover{
+            box-shadow: 20px 20px 0 #056f87;
+            top: -5px;
+            left: -5px;
+        }
+        .btn-6::after{
+            height: 100%;
+            left: -35%;
+            top: 0;
+            transform: skewX(35deg);
+            transition-duration: 0.6s;
+            transform-origin: top left;
+            width: 0;
+            box-shadow: inset -5.5em 0 0 0 #056f87,inset 5.5em 0 0 0 #056f87; 
+        }
+        .btn-6:hover::after{
+            height: 100%;
+            width: 135%;
+        }
+        .btn-7:hover::after{
+            width: 100%;
+            box-shadow: inset -10.5em 0 0 0 #056f87,inset 10.5em 0 0 0 #056f87; 
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button class="btn-1">Button-1</button>
+        <button class="btn-2">Button-2</button>
+        <button class="btn-3">Button-3</button>
+        <button class="btn-4">Button-4</button>
+        <button class="btn-5">Button-5</button>
+        <button class="btn-6">Button-6</button>
+        <button class="btn-7">Button-7</button>
+        <button class="btn-8">Button-8</button>
+    </div>
+    
+</body>
+</html>
